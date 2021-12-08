@@ -1,0 +1,210 @@
+.overlay {
+	background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+    
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background: #eee9e9;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	text-align: center;
+	width: auto;
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.popup .btn-cerrar-popup:hover {
+	color: #000;
+}
+
+.popup h3 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	opacity: 0;
+}
+
+.popup h4 {
+	font-size: 20px;
+	font-weight: 300;
+	margin-bottom: 40px;
+	opacity: 0;
+    color: rgba(65, 62, 62, 0.925);
+}
+
+.yape img{
+    width: 200px;
+    border-radius: 3px;
+    padding:  8px 0;
+}
+
+.whatsaap img {
+    width: 200px;
+    border-radius: 3px;
+    padding:  8px 0;
+}
+
+.medios-pago{
+    display: flex;
+    justify-content: center;
+}
+
+form p{
+	color: rgb(218, 25, 25);
+	font-size: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+form #number{
+	width: 90px;
+	border-radius: 4px;
+}
+
+.none{
+	opacity: 0;
+	display: flex;
+	position: absolute;
+	margin-top: -20px;
+	margin-left: 10px;
+	width: 45px;
+}
+.none:hover{
+	cursor: pointer;
+}
+/* --------------estilo de boton de enviar le pago ------------- */
+
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 6px 10px;
+    color: rgb(7, 7, 7);
+    letter-spacing: 0px;
+    text-decoration: none;
+	font-weight: bold;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn-neon:hover{
+	color: white;
+	background: #24FE41;
+    box-shadow: 0 0 10px #24FE41, 0 0 40px #24FE41, 0 0 80px #24FE41;
+    transition-delay: 1s;
+ }
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#24FE41);
+ }
+ .btn-neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#24FE41);
+}
+ .btn-neon:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#24FE41);
+}
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#24FE41);
+}
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup.active {	transform: scale(1); opacity: 1; }
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active .yape { animation: entradaInputs 1s linear .5s forwards; }
+.popup.active .whatsaap { animation: entradaInputs 1s linear 1s forwards; }
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}

@@ -1,0 +1,187 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 10px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 30px;
+    
+}
+
+
+.netflix img{
+    width: 9.45em;
+    display: block;
+    margin: auto auto;
+}
+.netflix{
+    background: rgba(81, 81, 83, 0.13);
+}
+
+
+.img-logo{
+    width: 1.5em;
+    height: 1,5em;
+
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+/* -------------------- portada nosotros----------------------- */
+
+.fondo-img img{
+    width: 100%;
+    
+    /* position: absolute;
+    z-index: -1; */
+
+}
+.info-nosotros{
+    padding: 20px;
+    position: relative;
+    margin-top: -260px;
+    margin-left: 60px;
+    max-width: 40%;
+    text-align: justify;
+    background: rgba(0, 0, 0, 0.432);
+    color: white;
+    border-radius: 12px;
+}
+
+.info-nosotros h2{
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: #000000;
+    text-align: center;
+}
+
+/* -----------Eestilos de vision y de  la mision -------------- */
+
+.vision-mision{
+    /* background-color: #ffc400; */
+    display: flex;
+    column-count: auto;
+    margin-top: 250px;
+    color: white;
+    margin-left: 120px;
+    max-width: 80%;
+}
+
+.vision-mision img{
+    padding-left: 50px;
+    margin-top: -50px;
+}
+.mision{
+    background-color: rgba(214, 211, 211, 0.247);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.vision{
+    background-color: rgba(185, 182, 182, 0.247);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* ---------colaboradores---------- */
+
+.nc{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.articulo__img{
+    width: 200px;
+    height: 180px;
+    justify-items: center;
+}
+
+.articulo__contenido h2{
+    color: white;
+    text-align: center;
+}
+
+.articulo_txt{
+    color: white;
+}
+
+.foto_profesores {
+    padding: 80px 150px;
+    background: rgba(129, 129, 129, 0.199);
+
+}
+
+.foto_profesores .contenido{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.foto_profesores .contenido .articulo{
+    width: 22%;
+    
+}
+
+.foto_profesores .contenido .articulo .articulo_contenido .caja_img{
+    background: rgba(221, 150, 18, 0.527);
+}
+
+.foto_profesores .contenido .articulo .articulo_contenido .cajaimg .articulo_img{
+    object-fit:cover;
+    width: 100%;
+    height: 250%;
+
+}
+
+.foto_profesores .contenido .articulo .articulo_contenido .articulo_titulo{
+    text-align: center;
+}
+
+.foto_profesores .contenido .articulo .articulo__contenido p{
+    text-align: center;
+    color: white;
+}
+
